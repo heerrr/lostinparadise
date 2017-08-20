@@ -11,5 +11,9 @@ return array(
         'name'=>'Buka Lapak',
         'engine'=>'LIPBukaLapak',
     ),
-    
+    'shopee'=>array (
+        'id'=>'shopee',
+        'name'=>'Shopee',
+        'engine'=>'LIPShopee',
+    ),
 );

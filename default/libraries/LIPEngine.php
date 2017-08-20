@@ -9,9 +9,10 @@ abstract class LIPEngine {
     protected $_engine_name;
     protected $_auth;
     protected $_url;
+    protected $_debug=false;
 
     public function __construct() {
-        
+        $this->_debug = false;
     }
 
     public function get_cookies_filename($account_name = null) {
@@ -209,13 +210,11 @@ abstract class LIPEngine {
                     'search' => 'code',
                     'replace' => $http_response_code
                 );
-                $this->error()->add_default(1012, '', $param);
+                throw new Exception('Error http code '.$http_response_code.' from remote server');
                 break;
         }
 
-        if ($this->error()->code() != '0') {
-            return FALSE;
-        }
+        
         return $this->_last_response;
     }
 

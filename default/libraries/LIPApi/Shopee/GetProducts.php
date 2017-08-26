@@ -8,7 +8,7 @@ class LIPApi_Shopee_GetProducts extends LIPApi_Method{
         
         $items = carr::get($search_items,'items');
         
-        
+        $result_items = $this->process('GetItems',$items);
         $data = array();
         $data['a']='b';
         $this->data = $data;

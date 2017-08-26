@@ -1,0 +1,122 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 26, 2017, 10:23:39 PM
+    Author     : Hery
+*/
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{margin:0}
+.container {
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.row-fluid {
+    margin-left:-15px;
+    margin-right:-15px;
+    width:auto;
+}
+.row-fluid>[class*="span"] {
+    margin-left: 0;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.row-fluid > .span1 {
+    width: 8.33333333%;
+}
+.row-fluid > .span2 {
+    width: 16.66666667%;
+}
+.row-fluid > .span3 {
+    width:25%;
+}
+.row-fluid > .span4 {
+    width:33.33333333%;
+}
+.row-fluid > .span5 {
+    width: 41.66666667%;
+}
+.row-fluid > .span6 {
+    width: 50%;
+}
+.row-fluid > .span7 {
+    width: 58.33333333%;
+}
+.row-fluid > .span8 {
+    width: 66.66666667%;
+}    
+.row-fluid > .span9 {
+    width:75%;
+}
+.row-fluid > .span10 {
+    width: 83.33333333%;
+}
+.row-fluid > .span11 {
+    width: 91.66666667%;
+}
+.row-fluid > .span12 {
+    width: 100%;
+}
+.product-wrapper {
+    text-align:center;
+    padding:15px;
+    border:1px solid #eee;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.product-wrapper.active {
+    background:#fff;
+    border:1px solid #666;
+    position:relative;
+}
+.product-wrapper.active::after {
+    font-family: FontAwesome;
+    content: "\f046";
+    font-size: 28px;
+    position: absolute;
+    right:15px;
+    bottom:15px;
+}
+.product-image-wrapper {
+    position:relative;
+    height:300px;
+    background:#fff;
+}
+.img-product {
+    position: absolute;
+    width:auto;
+    max-width:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+
+}
+
+.product-name {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    height: 2.6em !important;
+    max-height: 2.5em !important;
+    line-height: 1.3em !important;
+    text-align:left;
+    margin-top: 10px;
+}
+
+.product-price {
+    text-align: left;
+    margin-top: 5px;
+    color: #963434;
+    font-size: 14px;
+    font-weight:bold;
+}

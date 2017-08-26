@@ -30,9 +30,21 @@ class LIPApi_Parser {
         return $this->url;
     }
     
+    protected function cookies_file() {
+        $file_path = DOCROOT.'/application/lostinparadise/default/cookies/';
+        if(!is_dir($file_path)) {
+            @mkdir($file_path);
+        }
+        $file_path .= $this->engine."/";
+        
+        if(!is_dir($file_path)) {
+            @mkdir($file_path);
+        }
+        $file_path .= $this->engine.'.cookies';
+        return $file_path;
+    }
     
-    
-    protected function request_callback(&$curl, $parser_object, $data = NULL) {
+    protected function request_callback(&$curl, $data = NULL) {
         
     }
     
@@ -53,8 +65,9 @@ class LIPApi_Parser {
         $curl->set_opt(CURLOPT_SSL_VERIFYHOST, 2);
         $curl->set_opt(CURLOPT_ENCODING, 'gzip, deflate');
 
-
-        $this->request_callback($curl, $parser_object, $data);
+        $curl->set_cookies_file($this->cookies_file());
+        
+        $this->request_callback($curl, $data);
         CFBenchmark::start($parser_object->engine() . '_' . $parser_object->parser() . '_request');
         
         return $curl;

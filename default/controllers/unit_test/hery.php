@@ -8,6 +8,37 @@
 
 class Hery_Controller extends LIPAdminController {
 
+    public function phantom() {
+        $payload = '
+            {
+                "url": "https://shopee.co.id/",
+                "renderType": "jpeg",
+                "scripts": {
+                    "domReady": [
+                        "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js",  
+                        "document.cookie"
+                    ]
+                }
+}
+            
+            ';
+        
+        $url = 'http://PhantomJScloud.com/api/browser/v2/ak-e0fab-at6md-3byaz-wchzd-5cwre/';
+        
+        $options = array(
+            'http' => array(
+                'header'  => "Content-type: application/json\r\n",
+                'method'  => 'POST',
+                'content' => $payload
+            )
+        );
+        $context  = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
+        if ($result === FALSE) { /* Handle error */ }
+        var_dump($result);
+        
+    }
+    
     public function api() {
         $options = array();
         $options['url']='https://shopee.co.id/Handphone-Aksesoris-cat.40';

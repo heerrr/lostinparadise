@@ -35,7 +35,7 @@ class Users_Controller extends LIPAdminController {
                 users u 
                 inner join roles as r on u.role_id=r.role_id 
                 left join org as o on o.org_id=u.org_id 
-                where  u.status>0 and r.depth>" . $role->depth;
+                where r.role_type='lip' and u.status>0 and r.depth>" . $role->depth;
 
         $q.= ' ORDER BY u.updated desc ';
 

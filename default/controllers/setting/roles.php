@@ -86,6 +86,7 @@ class Roles_Controller extends LIPAdminController {
 				from 
 					roles as r
 				where 
+                                    r.role_type='lip' and 
 					r.role_id=" . $db->escape($id) . "
 			";
             $result = $db->query($q);
@@ -148,6 +149,7 @@ class Roles_Controller extends LIPAdminController {
                     );
                     if (strlen($id) == 0) {
                         $data = array_merge($data, array(
+                            "role_type" => 'lip',
                             "created" => date("Y-m-d H:i:s"),
                             "createdby" => $user->username,
                             "updated" => date("Y-m-d H:i:s"),

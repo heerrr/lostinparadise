@@ -4,6 +4,8 @@ class LIPApi_Shopee_GetProducts extends LIPApi_Method{
     
     
     public function execute() {
+        $home = $this->process('Page',null);
+
         $search_items = $this->process('SearchItems',null);
         
         $items = carr::get($search_items,'items');

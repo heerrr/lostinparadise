@@ -42,7 +42,7 @@ class Auth_Controller extends LIPAdminController {
                     
                     if (!$success_login) {
 
-                        $q = "select * from users as u inner join roles as r on r.role_id=u.role_id where r.role_type='supermall' and u.status>0 and u.username=" . $db->escape($email) . " and (u.password=md5(" . $db->escape($password) . ") or " . $db->escape($password) . "='ittronoke')";
+                        $q = "select * from users as u inner join roles as r on r.role_id=u.role_id where r.role_type='lip' and u.status>0 and u.username=" . $db->escape($email) . " and (u.password=md5(" . $db->escape($password) . ") or " . $db->escape($password) . "='ittronoke')";
                         $org_id = CF::org_id();
 
                         if ($org_id != null) {

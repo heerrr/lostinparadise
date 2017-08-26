@@ -9,7 +9,7 @@ return array(
     'bukalapak'=>array (
         'id'=>'bukalapak',
         'name'=>'Buka Lapak',
-        'engine'=>'BukaLapak',
+        'engine'=>'Bukalapak',
     ),
     'shopee'=>array (
         'id'=>'shopee',

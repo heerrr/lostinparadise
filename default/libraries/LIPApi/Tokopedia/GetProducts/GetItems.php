@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class LIPApi_Shopee_GetProducts_GetItem extends LIPApi_Parser {
+class LIPApi_Tokopedia_GetProducts_GetItem extends LIPApi_Parser {
 
     
 

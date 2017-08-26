@@ -1,16 +1,18 @@
 <?php
 
-class LIPApi_Shopee_GetProducts extends LIPApi_Method{
+class LIPApi_Tokopedia_GetProducts extends LIPApi_Method{
     
     
     public function execute() {
         $search_items = $this->process('SearchItems',null);
         
+        
+        
         $items = carr::get($search_items,'items');
         
         
         $data = array();
-        $data['a']='b';
+        $data['items']=$items;
         $this->data = $data;
     }
 }

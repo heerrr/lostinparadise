@@ -4,16 +4,16 @@ return array(
     'tokopedia'=>array (
         'id'=>'tokopedia',
         'name'=>'Tokopedia',
-        'engine'=>'LIPTokopedia',
+        'engine'=>'Tokopedia',
     ),
     'bukalapak'=>array (
         'id'=>'bukalapak',
         'name'=>'Buka Lapak',
-        'engine'=>'LIPBukaLapak',
+        'engine'=>'BukaLapak',
     ),
     'shopee'=>array (
         'id'=>'shopee',
         'name'=>'Shopee',
-        'engine'=>'LIPShopee',
+        'engine'=>'Shopee',
     ),
 );

@@ -8,6 +8,13 @@
 
 class Hery_Controller extends LIPAdminController {
 
+    public function api() {
+        $options = array();
+        $options['url']='https://shopee.co.id/Handphone-Aksesoris-cat.40';
+        $response = LIPApi::instance('shopee')->exec('GetProducts',$options);
+        cdbg::var_dump($response);
+    }
+    
     public function test() {
         $session = Session::instance();
         $cookies_file = DOCROOT . "test.cookies";

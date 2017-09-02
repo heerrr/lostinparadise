@@ -6,6 +6,11 @@ return array(
         'name'=>'Buka Lapak',
         'engine'=>'Bukalapak',
     ),
+    'blibli'=>array (
+        'id'=>'blibli',
+        'name'=>'Blibli',
+        'engine'=>'Blibli',
+    ),
     'tokopedia'=>array (
         'id'=>'tokopedia',
         'name'=>'Tokopedia',

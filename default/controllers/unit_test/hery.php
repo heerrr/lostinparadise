@@ -8,6 +8,13 @@
 
 class Hery_Controller extends LIPAdminController {
 
+    public function blibli() {
+        $options = array();
+        $options['url']='https://www.blibli.com/tablet-lainnya/54593';
+        $response = LIPApi::instance('blibli')->exec('GetProducts',$options);
+        cdbg::var_dump($response);
+    }
+    
     public function phantom() {
         $payload = '
             {

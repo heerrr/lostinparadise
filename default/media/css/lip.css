@@ -63,6 +63,10 @@ body{margin:0}
 .row-fluid > .span12 {
     width: 100%;
 }
+
+input, textarea, select, .uneditable-input {
+    height:28px;
+}
 .product-wrapper {
     text-align:center;
     padding:15px;

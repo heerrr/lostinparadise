@@ -13,7 +13,7 @@ class Home_Controller extends LIPAdminController {
     
     public function index() {
         $app = CApp::instance();
-        
+        $app->title('Dashboard');
         
         echo $app->render();
     }

@@ -101,7 +101,7 @@ class Auth_Controller extends LIPAdminController {
     }
 
     public function logout() {
-        $session = Session::instance();
+        $session = CSession::instance();
         $session->delete("user");
         //$session->destroy();
         curl::redirect("");

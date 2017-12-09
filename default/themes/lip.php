@@ -29,7 +29,7 @@ return array(
         'lip-modernizr',
     ),
     "js" => array(
-        "cresenity.func.js",
+        "capp.js",
         "cresenity.js",
     ),
     "css" => array(
